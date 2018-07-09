@@ -5,11 +5,12 @@
  * @license MIT
  */
 
+/* global angular */
 var i18nModule = angular.module('browser.i18n', []);
 
 i18nModule.factory('i18nService', function () {
 
-    var browserObject = ((typeof browser !== "undefined") && (typeof browser.i18n !== "undefined")) ? browser : chrome;
+    var browserObject = ((typeof browser !== 'undefined') && (typeof browser.i18n !== 'undefined')) ? browser : chrome;
     
     /**
      * Wrapper function for the getMessage() functionality
@@ -47,8 +48,8 @@ i18nModule.factory('i18nService', function () {
     };
 
     return {
-        getMessage: getMessage,
-        getMessageLinkFn: getMessageLinkFn
+        'getMessage': getMessage,
+        'getMessageLinkFn': getMessageLinkFn
     };
 
 });
@@ -61,12 +62,12 @@ i18nModule.factory('i18nService', function () {
  */
 i18nModule.directive('i18n', ['i18nService', function (i18nService) {
     return {
-        restrict: 'E',
-        scope: {
-            message: '=',
-            substitutions: '='
+        'restrict': 'E',
+        'scope': {
+            'message': '=',
+            'substitutions': '='
         },
-        link: i18nService.getMessageLinkFn
+        'link': i18nService.getMessageLinkFn
     };
 }]);
 
@@ -78,11 +79,11 @@ i18nModule.directive('i18n', ['i18nService', function (i18nService) {
  */
 i18nModule.directive('getMessage', ['i18nService', function (i18nService) {
     return {
-        restrict: 'A',
-        scope: {
-            message: '=getMessage',
-            substitutions: '='
+        'restrict': 'A',
+        'scope': {
+            'message': '=getMessage',
+            'substitutions': '='
         },
-        link: i18nService.getMessageLinkFn
+        'link': i18nService.getMessageLinkFn
     };
 }]);
