@@ -11,7 +11,7 @@ var i18nModule = angular.module('browser.i18n', []);
 i18nModule.factory('i18nService', function () {
 
     var browserObject = ((typeof browser !== 'undefined') && (typeof browser.i18n !== 'undefined')) ? browser : chrome;
-    
+
     /**
      * Wrapper function for the getMessage() functionality
      * @param {string} messageName the name of the message to retrieve
@@ -34,14 +34,19 @@ i18nModule.factory('i18nService', function () {
             element.html(getMessage(_message, _substitutions));
         }
 
-        scope.$watch('message', function (message) {
+        var unWatchMessage = scope.$watch('message', function (message) {
             _message = message;
             setMessage();
         });
 
-        scope.$watch('substitutions', function (substitutions) {
+        var unWatchSubstitutions = scope.$watch('substitutions', function (substitutions) {
             _substitutions = substitutions;
             setMessage();
+        });
+
+        element.on('$destroy', function () {
+            unWatchMessage();
+            unWatchSubstitutions();
         });
 
         setMessage();
