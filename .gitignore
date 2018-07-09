@@ -1,3 +1,13 @@
+# Build
+dist
+
+# Test
+test/extension/angular-browser-i18n.min.js
+test/extension/vendor
+
+# Misc
+Thumbs.db
+
 # Logs
 logs
 *.log

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html ng-app="testApp">
+
+    <head>
+        <meta charset="utf-8">
+        <script src="vendor/angular.min.js"></script>
+        <script src="angular-browser-i18n.min.js"></script>
+        <script src="popup.js"></script>
+    </head>
+
+    <body ng-controller="TestCtrl">
+
+        <p>
+            <label>
+                Enter Message Name:
+                <br/>
+                <input type="text" ng-model="message" id="inputMessage" />
+            </label>
+        </p>
+
+        <p>
+            <label>
+                Select Substitution(s):
+                <br/>
+                <select multiple="multiple" ng-model="substitutions" id="selectSubstitutions">
+                    <option ng-value="option" ng-repeat="option in ['purple', 'complex test', 'Wyoming', 2001]">{{option}}</option>
+                </select>
+            </label>
+        </p>
+
+        <hr/>
+
+        <h3>Data</h3>
+        <h4>Message</h4>
+        <pre><code>{{message | json}}</code></pre>
+        <h4>Substitution(s)</h4>
+        <pre><code>{{substitutions | json}}</code></pre>
+
+        <hr/>
+
+        <h2>Result</h2>
+
+        <div id="resultAttribute">
+            <h3>Attribute</h3>
+            <p>
+                <code>&lt;div get-message="message" substitutions="substitutions"&gt;&lt;/div&gt;</code>
+            </p>
+            <div get-message="message" substitutions="substitutions">Whatever text/HTML is here should be replaced.</div>
+        </div>
+
+        <br/>
+
+        <div id="resultElement">
+            <h3>Element</h3>
+            <p>
+                <code>&lt;i18n message="message" substitutions="substitutions"&gt;&lt;/i18n&gt;</code>
+            </p>
+            <i18n message="message" substitutions="substitutions">Whatever text/HTML is here should be replaced.</i18n>
+        </div>
+
+    </body>
+
+</html>

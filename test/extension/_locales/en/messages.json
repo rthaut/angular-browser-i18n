@@ -1,0 +1,42 @@
+{
+	"ExtensionName": {
+		"message": "Angular Browser i18n Directive Test Extension",
+		"description": "The name of the extension."
+	},
+	"ExtensionDescription": {
+		"message": "This is the test extension for the Angular Browser i18n Directive",
+		"description": "The short description of the extension."
+	},
+	"TestMessage01": {
+		"message": "This is a test message.",
+		"description": "A basic test message."
+	},
+	"TestMessage02": {
+		"message": "This is a $TYPE$ message.",
+		"description": "A test message with a single replacement.",
+		"placeholders": {
+			"type": {
+				"content": "$1"
+			}
+		}
+	},
+	"TestMessage03": {
+		"message": "This message should have 3 replacements: $ONE$, $TWO$, and $THREE$",
+		"description": "A test message with a single replacement.",
+		"placeholders": {
+			"one": {
+				"content": "$1"
+			},
+			"two": {
+				"content": "$2"
+			},
+			"three": {
+				"content": "$3"
+			}
+		}
+	},
+	"TestMessageHTML": {
+		"message": "<blockquote><p>You talkin' to me? <em>You talkin' to <strong>me</strong>?</em></p><p><small>&mdash; Travis Bickle</small></p></blockquote>",
+		"description": "A test message with HTML content."
+	}
+}
