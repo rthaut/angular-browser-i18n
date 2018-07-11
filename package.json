@@ -40,6 +40,12 @@
     "url": "https://github.com/rthaut/angular-browser-i18n/issues"
   },
   "homepage": "https://github.com/rthaut/angular-browser-i18n#readme",
+  "files": [
+    "dist/",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "devDependencies": {
     "angular": "^1.7.2",
     "del-cli": "^1.1.0",
