@@ -1,13 +1,8 @@
 language: node_js
 node_js:
-- '8'
+- node
 sudo: false
-script: npm run test --silent && npm run build && npm run clean
-deploy:
-  provider: npm
-  email: rthaut@gmail.com
-  api_key:
-    secure: hGHbWsnf4EJ4304X/lF++m0Ti33d9IwiVIUetAoGwlTS+IQKtIBPmHPyscSH5TJlHTtnj2Uf8n5KMhWkRj0Q+Yb6sMtj5X0THAjigNO1cuNR1vniU3+mYNTwKEg0qA1VhlbZ17TtDIL5rGlvknWG8J0l+nhq2eAwET6Ac4Kh2ge8VH1AeElY0Mn15WFrg3sHlOl+p45/P1eNVyV0Y3VoylWZTYRLn9EZQO9xE37N/zg38HYBaa8sA5/++1YzqFgofwiYh73skoj28BGQJc6GXJyce3gYDVY2HX/oz2CIudLuKHl7GEmCfdB+P6cBiwzTec0F4XPgV87O1zQ+lQiAesYHtamqKAEy0ulLl7rJunKm5g62nOj69ljRyEDjg4ZWBqhBQKc/kQPin5Q/uB+0FzFpGIo47O2uDRIqkZQCBwbn3vi3fHZuN06KbpdlhNTfh5Sqtzy0ms0Vw/itPGd2ZHmJdQOH8epxcjLyc2QHcKy8RdDdVi9JYejcrhNw+jI64AGlfPm+brUtitPS0o+ynn2hjKLZAc5w6KDflXOWZNSBHrVjdYQQ9ajwTiOlloJfVEEfdsZAYbmjBUKsdtGqUZ9r6iyl3YDcYt66+OBvsVcyMzo6GgmBuhEEIozb/eW/BR7q01tTmfuGIdSWBb3gvFQ+VcSHsrNXc2e9WDkkPB8=
-  on:
-    repo: rthaut/angular-browser-i18n
-  skip_cleanup: true
+script:
+- npm run test --silent
+- npm run build
+- npm run clean
