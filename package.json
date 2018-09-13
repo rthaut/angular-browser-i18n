@@ -18,7 +18,7 @@
     "test": "eslint src/directive.js",
     "watch": "npm-run-all --parallel watch:**",
     "watch:build": "watch \"npm run build\" src",
-    "watch:extension": "mkdirp dist && watch \"npm run test:copy:directive\" dist"
+    "watch:extension": "mkdirp dist && watch \"npm run extension:copy:directive\" dist"
   },
   "repository": {
     "type": "git",
