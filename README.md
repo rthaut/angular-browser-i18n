@@ -36,7 +36,17 @@ var app = angular.module('myApp', [..., 'browser.i18n']);
 
 Then use the directive either as an attribute or an element:
 
-### Attribute
+### Attribute Usage
+
+#### Using Scope Variables for Attribute Values
+
+```html
+<ANY get-message="{{myMessage}}"></ANY>
+<!-- OR -->
+<ANY get-message="{{myMessage}}" substitutions="{{mySubstitutions}}"></ANY>
+```
+
+#### Using Hard-Coded Attribute Values
 
 ```html
 <ANY get-message="msgName"></ANY>
@@ -44,7 +54,17 @@ Then use the directive either as an attribute or an element:
 <ANY get-message="msgName" substitutions="['sub1', 'sub2']"></ANY>
 ```
 
-### Element
+### Element Usage
+
+#### Using Scope Variables for Attribute Values
+
+```html
+<i18n message="{{myMessage}}"></i18n>
+<!-- OR -->
+<i18n message="{{myMessage}}" substitutions="{{mySubstitutions}}"></i18n>
+```
+
+#### Hard-Coded Attribute Values
 
 ```html
 <i18n message="msgName"></i18n>
