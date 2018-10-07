@@ -14,3 +14,4 @@ deploy:
   on:
     tags: true
     repo: rthaut/angular-browser-i18n
+  skip_cleanup: true
