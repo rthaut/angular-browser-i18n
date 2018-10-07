@@ -16,6 +16,8 @@
                 Enter Message Name:
                 <br/>
                 <input type="text" ng-model="message" id="inputMessage" />
+                <br/>
+                <small>Values: <code>TestMessage01</code>, <code>TestMessage02</code>, <code>TestMessage03</code>, <code>TestMessageHTML</code></small>
             </label>
         </p>
 
@@ -39,25 +41,51 @@
 
         <hr/>
 
-        <h2>Result</h2>
+        <h2>Results (Using Scope Variables)</h2>
 
-        <div id="resultAttribute">
-            <h3>Attribute</h3>
+        <div id="resultAttribute01">
+            <h3>Attribute (Tied to Scope Variables)</h3>
             <p>
-                <code>&lt;div get-message="message" substitutions="substitutions"&gt;&lt;/div&gt;</code>
+                <code ng-non-bindable>&lt;p get-message="{{message}}" substitutions="{{substitutions}}"&gt;&lt;/p&gt;</code>
             </p>
-            <div get-message="message" substitutions="substitutions">Whatever text/HTML is here should be replaced.</div>
+            <p get-message="{{message}}" substitutions="{{substitutions}}">Whatever text/HTML is here should be replaced.</p>
         </div>
 
         <br/>
 
-        <div id="resultElement">
-            <h3>Element</h3>
+        <div id="resultElement01">
+            <h3>Element (Tied to Scope Variables)</h3>
             <p>
-                <code>&lt;i18n message="message" substitutions="substitutions"&gt;&lt;/i18n&gt;</code>
+                <code ng-non-bindable>&lt;i18n message="{{message}}" substitutions="{{substitutions}}"&gt;&lt;/i18n&gt;</code>
             </p>
-            <i18n message="message" substitutions="substitutions">Whatever text/HTML is here should be replaced.</i18n>
+            <i18n message="{{message}}" substitutions="{{substitutions}}">Whatever text/HTML is here should be replaced.</i18n>
         </div>
+
+        <br/>
+
+        <hr/>
+
+        <h2>Results (Using Hard-Coded Values)</h2>
+
+        <div id="resultAttribute02">
+            <h3>Attribute (Hard-Coded Values)</h3>
+            <p>
+                <code ng-non-bindable>&lt;span get-message='TestMessage02' substitutions='["&lt;em&gt;Hard-Coded Value Test&lt;/em&gt;"]'&gt;&lt;/span&gt;</code>
+            </p>
+            <p>The next sentence should <strong>NOT</strong> change when updating the form fields above: <span get-message='TestMessage02' substitutions='["<em>Hard-Coded Value Test</em>"]'>Whatever text/HTML is here should be replaced.</span></p>
+        </div>
+
+        <br/>
+
+        <div id="resultAttribute02">
+            <h3>Attribute (Hard-Coded Values)</h3>
+            <p>
+                <code ng-non-bindable>&lt;i18n message='TestMessage02' substitutions='["&lt;em&gt;Hard-Coded Value Test&lt;/em&gt;"]'&gt;&lt;/i18n&gt;</code>
+            </p>
+            <p>The next sentence should <strong>NOT</strong> change when updating the form fields above: <i18n message='TestMessage02' substitutions='["<em>Hard-Coded Value Test</em>"]'>Whatever text/HTML is here should be replaced.</i18n></p>
+        </div>
+
+        <br/>
 
     </body>
 

@@ -1,6 +1,6 @@
 /**
  * angular-browser-i18n - AngularJS directives for utilizing native internationalization (i18n) functionality within browser extensions
- * @version v1.0.0
+ * @version v2.0.0
  * @link https://github.com/rthaut/angular-browser-i18n#readme
  * @license MIT
  */
@@ -31,16 +31,26 @@ i18nModule.factory('i18nService', function () {
         var _substitutions = scope.substitutions || [];
 
         function setMessage() {
-            element.html(getMessage(_message, _substitutions));
+            if (_message !== undefined) {
+                element.html(getMessage(_message, _substitutions));
+            }
         }
 
         var unWatchMessage = scope.$watch('message', function (message) {
-            _message = message;
+            if (message === undefined || message === null || !message.length) {
+                _message = '';
+            } else {
+                _message = message;
+            }
             setMessage();
         });
 
         var unWatchSubstitutions = scope.$watch('substitutions', function (substitutions) {
-            _substitutions = substitutions;
+            if (substitutions === undefined || substitutions === null || !substitutions.length) {
+                _substitutions = [];
+            } else {
+                _substitutions = angular.isArray(substitutions) ? substitutions : JSON.parse(substitutions);
+            }
             setMessage();
         });
 
@@ -69,8 +79,8 @@ i18nModule.directive('i18n', ['i18nService', function (i18nService) {
     return {
         'restrict': 'E',
         'scope': {
-            'message': '=',
-            'substitutions': '='
+            'message': '@',
+            'substitutions': '@'
         },
         'link': i18nService.getMessageLinkFn
     };
@@ -86,8 +96,8 @@ i18nModule.directive('getMessage', ['i18nService', function (i18nService) {
     return {
         'restrict': 'A',
         'scope': {
-            'message': '=getMessage',
-            'substitutions': '='
+            'message': '@getMessage',
+            'substitutions': '@'
         },
         'link': i18nService.getMessageLinkFn
     };

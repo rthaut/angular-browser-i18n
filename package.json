@@ -1,6 +1,6 @@
 {
   "name": "angular-browser-i18n",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "AngularJS directives for utilizing native internationalization (i18n) functionality within browser extensions",
   "main": "index.js",
   "scripts": {
