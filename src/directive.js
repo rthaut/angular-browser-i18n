@@ -1,6 +1,6 @@
 /**
  * angular-browser-i18n - AngularJS directives for utilizing native internationalization (i18n) functionality within browser extensions
- * @version v2.0.0
+ * @version v2.0.1
  * @link https://github.com/rthaut/angular-browser-i18n#readme
  * @license MIT
  */
