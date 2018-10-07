@@ -1,4 +1,4 @@
-# angular-browser-i18n v1.0.0
+# angular-browser-i18n v2.0.0
 
 > AngularJS directives for utilizing native internationalization (i18n) functionality within browser extensions
 
