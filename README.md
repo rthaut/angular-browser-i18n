@@ -1,5 +1,7 @@
 # angular-browser-i18n v2.0.1
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rthaut/angular-browser-i18n.svg)](https://greenkeeper.io/)
+
 > AngularJS directives for utilizing native internationalization (i18n) functionality within browser extensions
 
 Please see the [MDN article on Internationalization for Browser Extensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Internationalization) to understand how and why to internationalize browser extensions. This Angular directive is simply meant to make it easier to access the native browser internationalization functionality within an Angular app on a custom page of extensions.
