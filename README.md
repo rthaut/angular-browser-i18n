@@ -76,7 +76,7 @@ Then use the directive either as an attribute or an element:
 
 See the [extension in the test directory](/test/extension) for a complete working example. This example extension demonstrates how to implement this directive within an extension, including how both the name of the message and the substitutions can be dynamic.
 
-To build/run the extension, run `npm install` first to install all dependencies, then run `npm build` to generate the compiled directive scripts, then run `npm test` to copy the necessary files to the extension directory and launch Firefox (if it is installed) automatically.
+To build/run the extension, run `npm install` first to install all dependencies, then run `npm run build` to generate the compiled directive scripts, then run `npm run extension` to copy the necessary files to the extension directory and launch Firefox (if it is installed) automatically.
 
 [travis-url]: http://travis-ci.com/rthaut/angular-browser-i18n
 [travis-image]: https://travis-ci.com/rthaut/angular-browser-i18n.svg?branch=master
