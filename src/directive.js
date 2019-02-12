@@ -1,6 +1,6 @@
 /**
  * angular-browser-i18n - AngularJS directives for utilizing native internationalization (i18n) functionality within browser extensions
- * @version v2.0.1
+ * @version v2.0.2
  * @link https://github.com/rthaut/angular-browser-i18n#readme
  * @license MIT
  */
@@ -18,6 +18,9 @@ i18nModule.factory('i18nService', function () {
      * @param {string[]} [substitutions] the array of substitutions to use in the retrieved message
      */
     var getMessage = function (messageName, substitutions) {
+        if (!angular.isArray(substitutions)) {
+            substitutions = [].concat(substitutions);
+        }
         return browserObject.i18n.getMessage(messageName, substitutions);
     };
 
