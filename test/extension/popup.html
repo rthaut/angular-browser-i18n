@@ -87,6 +87,28 @@
 
         <br/>
 
+        <hr/>
+
+        <br/>
+
+        <div id="resultAttribute03">
+            <h3>Attribute (Tied to Scope Function)</h3>
+            <p>
+                <code ng-non-bindable>&lt;p get-message="TestMessageWindowWidth" substitutions="{{getWindowDimension('Width')}}"&gt;&lt;/p&gt;</code>
+            </p>
+            <p get-message="TestMessageWindowWidth" substitutions="{{getWindowDimension('Width')}}">Whatever text/HTML is here should be replaced.</p>
+        </div>
+
+        <br/>
+
+        <div id="resultElement03">
+            <h3>Element (Tied to Scope Function)</h3>
+            <p>
+                <code ng-non-bindable>&lt;i18n message="TestMessageWindowWidth" substitutions="{{getWindowDimension('Width')}}"&gt;&lt;/i18n&gt;</code>
+            </p>
+            <i18n message="TestMessageWindowWidth" substitutions="{{getWindowDimension('Width')}}">Whatever text/HTML is here should be replaced.</i18n>
+        </div>
+
     </body>
 
 </html>

@@ -38,5 +38,9 @@
 	"TestMessageHTML": {
 		"message": "<blockquote><p>You talkin' to me? <em>You talkin' to <strong>me</strong>?</em></p><p><small>&mdash; Travis Bickle</small></p></blockquote>",
 		"description": "A test message with HTML content."
+	},
+	"TestMessageWindowWidth": {
+		"message": "This window's width is: <strong>$1</strong>",
+		"description": "A test message with a single substitution."
 	}
 }
