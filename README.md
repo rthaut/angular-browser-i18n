@@ -6,7 +6,7 @@ Please see the [MDN article on Internationalization for Browser Extensions](http
 
 * * *
 
-[![Build status][travis-image]][travis-url] [![Dependencies status][david-image]][david-url] [![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url] [![Dependencies status][david-image]][david-url] [![NPM version][npm-image]][npm-url] [![Greenkeeper badge](https://badges.greenkeeper.io/rthaut/angular-browser-i18n.svg)](https://greenkeeper.io/)
 
 ## Installation
 
