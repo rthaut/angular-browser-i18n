@@ -48,7 +48,7 @@
   ],
   "devDependencies": {
     "angular": "1.7.5",
-    "del-cli": "1.1.0",
+    "del-cli": "2.0.0",
     "eslint": "5.16.0",
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
