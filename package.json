@@ -47,7 +47,7 @@
     "README.md"
   ],
   "devDependencies": {
-    "angular": "1.8.0",
+    "angular": "1.8.1",
     "del-cli": "3.0.1",
     "eslint": "7.10.0",
     "mkdirp": "1.0.4",
